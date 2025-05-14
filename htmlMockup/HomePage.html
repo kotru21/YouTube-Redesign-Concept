@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Redesign</title>
+    <link rel="stylesheet" href="HomePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Верхняя панель (навбар) -->
+    <header class="navbar">
+      <div class="navbar-left">
+        <button class="menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="#" class="logo">
+          <i class="fab fa-youtube"></i>
+          <span>YouTube</span>
+        </a>
+      </div>
+
+      <div class="navbar-center">
+        <form class="search-form">
+          <input type="text" placeholder="Search" class="search-input" />
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="navbar-right">
+        <button class="navbar-icon-button">
+          <i class="fas fa-video"></i>
+        </button>
+        <button class="navbar-icon-button">
+          <i class="fas fa-th"></i>
+        </button>
+        <button class="navbar-icon-button notification-button">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">1</span>
+        </button>
+        <a href="#" class="avatar">
+          <img src="https://via.placeholder.com/32" alt="User avatar" />
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Боковая панель (сайдбар) -->
+      <aside class="sidebar">
+        <!-- Основные вкладки (1-я секция) -->
+        <div class="sidebar-section">
+          <a href="#" class="sidebar-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-fire"></i>
+            <span>Trending</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-tv"></i>
+            <span>Subscriptions</span>
+          </a>
+        </div>
+
+        <!-- Вторая секция -->
+        <div class="sidebar-section">
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-folder"></i>
+            <span>Library</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-clock"></i>
+            <span>Watch later</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-star"></i>
+            <span>Favourites</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-thumbs-up"></i>
+            <span>Liked videos</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-music"></i>
+            <span>Music</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-gamepad"></i>
+            <span>Games</span>
+          </a>
+          <a href="#" class="sidebar-item show-more">
+            <i class="fas fa-chevron-down"></i>
+            <span>Show more</span>
+          </a>
+        </div>
+
+        <!-- Секция с подписками -->
+        <div class="sidebar-section subscriptions">
+          <h3>Subscriptions</h3>
+          <a href="#" class="subscription-item">
+            <img src="https://via.placeholder.com/36" alt="Gussie Singleton" />
+            <span>Gussie Singleton</span>
+          </a>
+          <a href="#" class="subscription-item">
+            <img src="https://via.placeholder.com/36" alt="Nora Francis" />
+            <span>Nora Francis</span>
+          </a>
+          <a href="#" class="subscription-item">
+            <img src="https://via.placeholder.com/36" alt="Belle Briggs" />
+            <span>Belle Briggs</span>
+          </a>
+          <a href="#" class="subscription-item">
+            <img src="https://via.placeholder.com/36" alt="Eunice Cortez" />
+            <span>Eunice Cortez</span>
+          </a>
+          <a href="#" class="subscription-item">
+            <img src="https://via.placeholder.com/36" alt="Emma Hanson" />
+            <span>Emma Hanson</span>
+          </a>
+          <a href="#" class="subscription-item">
+            <img src="https://via.placeholder.com/36" alt="Leah Berry" />
+            <span>Leah Berry</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <!-- Основной контент будет здесь -->
+      </main>
+    </div>
+
+    <!-- Мобильная навигация -->
+    <nav class="mobile-navigation">
+      <a href="#" class="mobile-nav-item active">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <i class="fas fa-fire"></i>
+        <span>Trending</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <i class="fas fa-tv"></i>
+        <span>Subscriptions</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <i class="fas fa-folder"></i>
+        <span>Library</span>
+      </a>
+    </nav>
+
+    <script>
+      // Функционал для кнопки "Show more"
+      document
+        .querySelector(".show-more")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const showMoreText = this.querySelector("span");
+          const showMoreIcon = this.querySelector("i");
+
+          if (showMoreText.textContent === "Show more") {
+            showMoreText.textContent = "Show less";
+            showMoreIcon.classList.replace("fa-chevron-down", "fa-chevron-up");
+          } else {
+            showMoreText.textContent = "Show more";
+            showMoreIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
+          }
+        });
+    </script>
+  </body>
+</html>

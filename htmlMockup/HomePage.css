@@ -1,0 +1,304 @@
+@import url("https://fonts.cdnfonts.com/css/mulish");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #030303;
+  line-height: 1.4;
+}
+
+/* Стили для навбара */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 200;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 16px;
+  color: #606060;
+  font-size: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #212121;
+  font-weight: 700;
+}
+
+.logo i {
+  color: #ff0000;
+  font-size: 28px;
+  margin-right: 4px;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 640px;
+  margin: 0 40px;
+}
+
+.search-form {
+  background: #ebebeb;
+  border-radius: 12px;
+  display: flex;
+  flex: 1;
+  max-width: 100%;
+}
+
+.search-input {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.search-button {
+  height: 40px;
+  width: 64px;
+  background: none;
+  border: none;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon-button {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+  color: #606060;
+  margin-left: 8px;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #ff0000;
+  color: white;
+  font-size: 11px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.avatar {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Стили для сайдбара */
+.sidebar {
+  width: 220px;
+  height: 100%;
+  background-color: white;
+  padding: 12px 21px;
+  position: fixed;
+  top: 56px; /* Высота верхней панели */
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.sidebar-section {
+  padding: 8px 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  text-decoration: none;
+  color: #030303;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.sidebar-item i {
+  margin-right: 24px;
+  font-size: 16pt;
+  color: #898989;
+  min-width: 20px;
+  text-align: center;
+}
+
+.sidebar-item.active i {
+  color: #ff0000;
+}
+
+.sidebar-item.active > span {
+  color: #ff0000;
+}
+
+/* Стили для раздела подписок */
+.subscriptions h3 {
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #606060;
+}
+
+.subscription-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  text-decoration: none;
+  color: #030303;
+  font-size: 14px;
+}
+
+.subscription-item:hover {
+  background-color: #f2f2f2;
+}
+
+.subscription-item img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 24px;
+  object-fit: cover;
+}
+
+/* Основной контент */
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 16px;
+  padding-top: 72px; /* Высота верхней панели + отступ */
+}
+
+/* Мобильная навигация */
+.mobile-navigation {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: white;
+  border-top: 1px solid #e5e5e5;
+  z-index: 1000;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 6px 0;
+  text-decoration: none;
+  color: #606060;
+  font-size: 11px;
+}
+
+.mobile-nav-item.active {
+  color: #ff0000;
+}
+
+.mobile-nav-item i {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 1024px) {
+  .navbar-center {
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-bottom: 56px;
+  }
+
+  .mobile-navigation {
+    display: flex;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .navbar-center {
+    margin: 0 8px;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 8px;
+  }
+
+  .menu-button {
+    margin-right: 8px;
+  }
+}
