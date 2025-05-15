@@ -94,6 +94,7 @@ body {
 }
 
 .navbar-right {
+  gap: 0.75rem;
   display: flex;
   align-items: center;
 }
@@ -134,8 +135,8 @@ body {
 }
 
 .avatar img {
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -475,11 +476,37 @@ body {
     margin-right: 0;
     width: 100%;
     padding-left: 16px;
+    padding-top: 45px;
     padding-right: 16px;
     margin-bottom: 56px;
   }
 
-  .channel-info {
+  .menu-button {
+    display: none; /* Скрываем кнопку меню */
+  }
+
+  .navbar-right .navbar-icon-button {
+    display: none; /* Скрываем все кнопки в правой части навбара */
+  }
+
+  .navbar-center {
+    margin: 0 12px;
+  }
+
+  .avatar {
+    margin-left: 12px;
+  }
+
+  .avatar img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-form {
+    max-width: 70%; /* Ограничиваем ширину, чтобы не перекрывать аватарку */
+  }
+
+  .channel-info:not(.food-drink-header) {
     display: none;
   }
 
@@ -534,6 +561,42 @@ body {
   .navbar-right .navbar-icon-button:not(.notification-button) {
     display: none;
   }
+
+  .food-drink-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .food-drink-header .channel-avatar {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+
+  .food-drink-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .food-drink-info .channel-name {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+
+  .food-drink-info .channel-tag {
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .section-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .subscribe-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -543,5 +606,41 @@ body {
 
   .menu-button {
     margin-right: 8px;
+  }
+}
+
+/* Добавить новые стили для мобильного отображения Food & Drink */
+.food-drink-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-drink-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Изменяем стили для заголовка Food & Drink на десктопе */
+.food-drink-info {
+  display: flex;
+  flex-direction: row; /* Горизонтальное расположение на десктопе */
+  align-items: center;
+}
+
+.food-drink-info .channel-name {
+  margin-right: 10px; /* Отступ между названием и тегом */
+  margin-bottom: 0;
+}
+
+/* В мобильной версии сохраняем вертикальное расположение */
+@media (max-width: 768px) {
+  .food-drink-info {
+    flex-direction: column; /* Вертикальное расположение на мобильных */
+    align-items: flex-start;
+  }
+
+  .food-drink-info .channel-name {
+    margin-right: 0;
+    margin-bottom: 2px;
   }
 }
