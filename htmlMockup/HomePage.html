@@ -51,11 +51,12 @@
 
     <div class="container">
       <!-- Боковая панель (сайдбар) -->
-      <aside class="sidebar">
-        <!-- Основные вкладки (1-я секция) -->
-        <div class="sidebar-section">
-          <a href="#" class="sidebar-item active">
-            <i class="fas fa-home"></i>
+      <nav class="sidebar" aria-label="Main navigation">
+        <!-- Основные вкладки -->
+        <section class="sidebar-section">
+          <h2 class="visually-hidden">Main menu</h2>
+          <a href="#" class="sidebar-item active" aria-current="page">
+            <i class="fas fa-home" aria-hidden="true"></i>
             <span>Home</span>
           </a>
           <a href="#" class="sidebar-item">
@@ -66,10 +67,11 @@
             <i class="fas fa-tv"></i>
             <span>Subscriptions</span>
           </a>
-        </div>
+        </section>
 
         <!-- Вторая секция -->
-        <div class="sidebar-section">
+        <section class="sidebar-section">
+          <h2 class="visually-hidden">Library</h2>
           <a href="#" class="sidebar-item">
             <i class="fas fa-folder"></i>
             <span>Library</span>
@@ -102,74 +104,76 @@
             <i class="fas fa-chevron-down"></i>
             <span>Show more</span>
           </a>
-        </div>
+        </section>
 
         <!-- Секция с подписками -->
-        <div class="sidebar-section subscriptions">
-          <h3>Subscriptions</h3>
-          <a href="#" class="subscription-item">
-            <img
-              src="https://placehold.co/600x400/orange/white"
-              alt="Gussie Singleton" />
-            <span>Gussie Singleton</span>
-          </a>
-          <a href="#" class="subscription-item">
-            <img
-              src="https://placehold.co/600x400/orange/white"
-              alt="Nora Francis" />
-            <span>Nora Francis</span>
-          </a>
-          <a href="#" class="subscription-item">
-            <img
-              src="https://placehold.co/600x400/orange/white"
-              alt="Belle Briggs" />
-            <span>Belle Briggs</span>
-          </a>
-          <a href="#" class="subscription-item">
-            <img
-              src="https://placehold.co/600x400/orange/white"
-              alt="Eunice Cortez" />
-            <span>Eunice Cortez</span>
-          </a>
-          <a href="#" class="subscription-item">
-            <img
-              src="https://placehold.co/600x400/orange/white"
-              alt="Emma Hanson" />
-            <span>Emma Hanson</span>
-          </a>
-          <a href="#" class="subscription-item">
-            <img
-              src="https://placehold.co/600x400/orange/white"
-              alt="Leah Berry" />
-            <span>Leah Berry</span>
-          </a>
-        </div>
-      </aside>
+        <section class="sidebar-section subscriptions">
+          <h3 id="subscription-heading">Subscriptions</h3>
+          <div role="list" aria-labelledby="subscription-heading">
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/600x400/orange/white"
+                alt="Gussie Singleton" aria-hidden="true" />
+              <span>Gussie Singleton</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/600x400/orange/white"
+                alt="Nora Francis" aria-hidden="true" />
+              <span>Nora Francis</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/600x400/orange/white"
+                alt="Belle Briggs" aria-hidden="true" />
+              <span>Belle Briggs</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/600x400/orange/white"
+                alt="Eunice Cortez" aria-hidden="true" />
+              <span>Eunice Cortez</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/600x400/orange/white"
+                alt="Emma Hanson" aria-hidden="true" />
+              <span>Emma Hanson</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/600x400/orange/white"
+                alt="Leah Berry" aria-hidden="true" />
+              <span>Leah Berry</span>
+            </a>
+          </div>
+        </section>
+      </nav>
 
       <main class="main-content">
         <!-- Блок с видео пользователя -->
-        <div class="channel-videos-section">
-          <div class="section-header">
+        <section class="channel-videos-section">
+          <header class="section-header">
             <div class="channel-info">
               <img
                 src="https://placehold.co/600x400/orange/white"
-                alt="Channel avatar"
+                alt="Dollie Blair"
                 class="channel-avatar" />
               <h2 class="channel-name">Dollie Blair</h2>
             </div>
-            <div class="section-controls">
+            <nav class="section-controls" aria-label="Video navigation">
               <button
                 class="nav-button prev-button"
                 aria-label="Предыдущие видео">
-                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
               </button>
               <button
                 class="nav-button next-button"
                 aria-label="Следующие видео">
-                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
               </button>
-            </div>
-          </div>
+            </nav>
+          </header>
 
           <div class="videos-container">
             <div class="video-card">
@@ -268,9 +272,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="recommended-section">
-          <div class="section-header">
+        </section>
+        <section class="recommended-section">
+          <header class="section-header">
             <div class="section-title">
               <h2 class="section-name">Recommended</h2>
             </div>
@@ -286,7 +290,7 @@
                 <i class="fas fa-chevron-right"></i>
               </button>
             </div>
-          </div>
+          </header>
 
           <div class="videos-container recommended-videos">
             <div class="video-card">
@@ -385,11 +389,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Секция "Food & Drink" -->
-        <div class="food-drink-section">
-          <div class="section-header">
+        <section class="food-drink-section">
+          <header class="section-header">
             <div class="section-title channel-info food-drink-header">
               <img
                 src="https://placehold.co/600x400/orange/white"
@@ -415,7 +419,7 @@
                 </button>
               </div>
             </div>
-          </div>
+          </header>
 
           <div class="videos-container food-videos">
             <div class="video-card">
@@ -514,7 +518,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </div>
 

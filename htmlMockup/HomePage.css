@@ -1,4 +1,53 @@
 @import url("https://fonts.cdnfonts.com/css/mulish");
+
+:root {
+  /* Основные цвета */
+  --color-primary: #ff0000; /* красный цвет YouTube */
+  --color-primary-dark: #cc0000; /* для hover-эффектов */
+
+  /* Текстовые цвета */
+  --text-primary: #030303;
+  --text-secondary: #606060;
+  --text-tertiary: #898989;
+
+  /* Фоновые цвета */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9f9f9;
+  --bg-tertiary: #f2f2f2;
+  --bg-hover: #e5e5e5;
+
+  /* Цвета границ */
+  --border-light: #e5e5e5;
+  --border-medium: #ccc;
+
+  /* Радиусы скругления */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-circle: 50%;
+
+  /* Размеры шрифтов */
+  --font-xs: 11px;
+  --font-sm: 12px;
+  --font-md: 14px;
+  --font-lg: 16px;
+  --font-xl: 18px;
+  --font-xxl: 20px;
+
+  /* Отступы */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Размеры компонентов */
+  --navbar-height: 56px;
+  --sidebar-width: 220px;
+  --sidebar-width-collapsed: 72px;
+  --mobile-nav-height: 56px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +62,7 @@ body {
 }
 
 body {
-  font-family: "Roboto", Arial, sans-serif;
-
-  color: #030303;
+  color: var(--text-primary);
   line-height: 1.4;
 }
 
@@ -24,12 +71,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 56px;
-  background-color: white;
+  height: var(--navbar-height);
+  background-color: var(--bg-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 38px 16px;
+  padding: 38px var(--spacing-md);
   z-index: 200;
 }
 
@@ -45,8 +92,8 @@ body {
   margin-top: -6px;
   margin-right: 25px;
   margin-left: 9px;
-  color: black;
-  font-size: 18px;
+  color: var(--text-primary);
+  font-size: var(--font-xl);
 }
 
 .navbar-center {
@@ -56,7 +103,7 @@ body {
   max-width: 690px;
   margin: 0;
   margin-right: auto;
-  margin-left: 20px;
+  margin-left: var(--spacing-md);
 }
 
 .logo {
@@ -67,8 +114,8 @@ body {
   margin-top: -10px;
   height: 44px;
   margin-left: 28px;
-  background: #fafafa;
-  border-radius: 18px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
   display: flex;
   flex: 1;
   max-width: 100%;
@@ -78,8 +125,8 @@ body {
   background: none;
   border: none;
   width: 100%;
-  padding: 0 12px;
-  font-size: 12px;
+  padding: 0 var(--spacing-md);
+  font-size: var(--font-sm);
   font-weight: 400;
 }
 
@@ -88,8 +135,6 @@ body {
   width: 64px;
   background: none;
   border: none;
-  border-left: none;
-  border-radius: 0 2px 2px 0;
   cursor: pointer;
 }
 
@@ -104,20 +149,20 @@ body {
   border: none;
   width: 40px;
   height: 40px;
-  padding: 8px;
+  padding: var(--spacing-sm);
   cursor: pointer;
-  color: #606060;
-  margin-left: 8px;
+  color: var(--text-secondary);
+  margin-left: var(--spacing-sm);
   position: relative;
 }
 
 .notification-badge {
   position: absolute;
-  top: 4px;
-  right: 4px;
-  background-color: #ff0000;
-  color: white;
-  font-size: 11px;
+  top: var(--spacing-xs);
+  right: var(--spacing-xs);
+  background-color: var(--color-primary);
+  color: var(--bg-primary);
+  font-size: var(--font-xs);
   min-width: 16px;
   height: 16px;
   border-radius: 8px;
@@ -128,7 +173,7 @@ body {
 }
 
 .avatar {
-  margin-left: 8px;
+  margin-left: var(--spacing-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +182,7 @@ body {
 .avatar img {
   width: 35px;
   height: 35px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   object-fit: cover;
 }
 
@@ -150,23 +195,20 @@ body {
 
 /* Стили для сайдбара */
 .sidebar {
-  font-size: 12.5px;
+  font-size: var(--font-sm);
   padding: 0 25px;
-  width: 220px;
+  width: var(--sidebar-width);
   height: 100%;
   position: fixed;
-  top: 56px; /* Высота верхней панели */
+  top: var(--navbar-height);
   left: 0;
   bottom: 0;
   z-index: 100;
-  overflow-y: auto; /* Сохраняем возможность прокрутки */
-
-  /* Скрываем полосу прокрутки */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE и Edge */
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Скрываем полосу прокрутки для Chrome, Safari и других WebKit-браузеров */
 .sidebar::-webkit-scrollbar {
   display: none;
 }
@@ -176,7 +218,7 @@ body {
 }
 
 .sidebar-item {
-  color: #898989;
+  color: var(--text-tertiary);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -186,24 +228,24 @@ body {
 .sidebar-item i {
   margin-right: 7px;
   font-size: 10pt;
-  color: #898989;
+  color: var(--text-tertiary);
   min-width: 20px;
   text-align: center;
 }
 
 .sidebar-item.active i {
-  color: #ff0000;
+  color: var(--color-primary);
 }
 
 .sidebar-item.active > span {
-  color: #ff0000;
+  color: var(--color-primary);
 }
 
 /* Стили для раздела подписок */
 .subscriptions h3 {
-  font-size: 14.45px;
+  font-size: var(--font-md);
   font-weight: 700;
-  color: black;
+  color: var(--text-primary);
 }
 
 .subscription-item {
@@ -211,11 +253,11 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #898989;
+  color: var(--text-tertiary);
 }
 
 .subscription-item span {
-  margin-left: 2px;
+  margin-left: var(--spacing-xs);
 }
 
 .subscriptions {
@@ -223,14 +265,14 @@ body {
 }
 
 .subscription-item:hover {
-  background-color: #f2f2f2;
+  background-color: var(--bg-tertiary);
 }
 
 .subscription-item img {
   width: 21px !important;
   height: 21px !important;
-  border-radius: 50%;
-  margin-right: 4px;
+  border-radius: var(--radius-circle);
+  margin-right: var(--spacing-xs);
   object-fit: cover;
 }
 
@@ -239,17 +281,18 @@ body {
   flex: 1;
   margin-left: 205px;
   padding-top: 90px;
-  width: calc(100% - 205px); /* Ширина с учетом отступов */
+  width: calc(100% - 205px);
   max-width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 
+/* Все заголовки секций */
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md);
   width: 100%;
 }
 
@@ -261,50 +304,51 @@ body {
 .channel-avatar {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   object-fit: cover;
-  margin-right: 16px;
+  margin-right: var(--spacing-md);
 }
 
 .channel-name {
-  font-size: 20px;
+  font-size: var(--font-xxl);
   font-weight: 700;
-  color: #030303;
+  color: var(--text-primary);
 }
 
 .section-controls {
   margin-right: 105px;
   display: flex;
-  gap: 16px;
-  position: relative; /* Гарантирует, что кнопки останутся в потоке документа */
-  z-index: 10; /* Чтобы кнопки были над другим контентом */
+  gap: var(--spacing-md);
+  position: relative;
+  z-index: 10;
 }
 
+/* Все кнопки навигации */
 .nav-button {
   border: none;
   background-color: #c2c2c2;
   width: 28px;
   height: 28px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #ffffff;
-  font-size: 13px;
+  color: var(--bg-primary);
+  font-size: var(--font-sm);
   font-weight: bold;
 }
 
+/* Все контейнеры с видео */
 .videos-container {
   display: flex;
-  gap: 32px;
+  gap: var(--spacing-xl);
   overflow-x: auto;
-  padding-bottom: 16px;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE и Edge */
+  padding-bottom: var(--spacing-md);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Скрываем скроллбар для Chrome, Safari и других WebKit-браузеров */
 .videos-container::-webkit-scrollbar {
   display: none;
 }
@@ -316,6 +360,11 @@ body {
 
 .recommended-section .thumbnail img {
   aspect-ratio: 540 / 250;
+}
+
+/* Компоненты видеокарточек - общие стили */
+.video-card {
+  cursor: pointer;
 }
 
 .video-card {
@@ -340,20 +389,20 @@ body {
 
 .duration {
   position: absolute;
-  bottom: 12px;
-  right: 8px;
+  bottom: var(--spacing-md);
+  right: var(--spacing-sm);
   background-color: rgba(255, 255, 255, 0.7);
-  color: rgb(0, 0, 0);
-  font-size: 11px;
-  padding: 2px 8px;
+  color: var(--text-primary);
+  font-size: var(--font-xs);
+  padding: 2px var(--spacing-sm);
   border-radius: 10px;
 }
 
 .video-title {
-  font-size: 12.8px;
+  font-size: var(--font-sm);
   font-weight: 600;
-  color: #030303;
-  margin-bottom: 4px;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -362,27 +411,22 @@ body {
 }
 
 .video-stats {
-  font-size: 10px;
-  color: #606060;
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
   margin-bottom: 0;
 }
 
 .channel-title {
-  font-size: 10px;
-  color: #606060;
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
   text-align: right;
 }
 
-.video-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+/* Контейнеры для разделов */
 .channel-videos-section,
 .recommended-section,
 .food-drink-section {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md);
   width: 100%;
   position: relative;
 }
@@ -393,14 +437,14 @@ body {
 }
 
 .section-name {
-  font-size: 20px;
+  font-size: var(--font-xxl);
   font-weight: 700;
-  color: #030303;
+  color: var(--text-primary);
 }
 
 .channel-tag {
-  color: #606060;
-  font-size: 14px;
+  color: var(--text-secondary);
+  font-size: var(--font-md);
   margin-left: 10px;
 }
 
@@ -411,18 +455,18 @@ body {
 }
 
 .subscribe-button {
-  background-color: #ff0000;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--bg-primary);
   border: none;
-  border-radius: 18px;
-  padding: 10px 16px;
-  font-size: 14px;
+  border-radius: var(--radius-lg);
+  padding: 10px var(--spacing-md);
+  font-size: var(--font-md);
   font-weight: 500;
   cursor: pointer;
 }
 
 .subscribe-button:hover {
-  background-color: #cc0000;
+  background-color: var(--color-primary-dark);
 }
 
 /* Мобильная навигация */
@@ -643,4 +687,15 @@ body {
     margin-right: 0;
     margin-bottom: 2px;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
