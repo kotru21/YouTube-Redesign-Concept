@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
+  padding: 38px 16px;
   z-index: 200;
 }
 
@@ -37,24 +37,11 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
-  margin-right: 16px;
-  color: #606060;
+  margin-top: -6px;
+  margin-right: 25px;
+  margin-left: 9px;
+  color: black;
   font-size: 18px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #212121;
-  font-weight: 700;
-}
-
-.logo i {
-  color: #ff0000;
-  font-size: 28px;
-  margin-right: 4px;
 }
 
 .navbar-center {
@@ -63,6 +50,10 @@ body {
   flex: 1;
   max-width: 640px;
   margin: 0 40px;
+}
+
+.logo {
+  width: 93px;
 }
 
 .search-form {
@@ -134,8 +125,8 @@ body {
 }
 
 .avatar img {
-  width: 32px;
-  height: 32px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -147,10 +138,10 @@ body {
 
 /* Стили для сайдбара */
 .sidebar {
+  font-size: 12.5px;
+  padding: 0 25px;
   width: 220px;
   height: 100%;
-  background-color: white;
-  padding: 12px 21px;
   position: fixed;
   top: 56px; /* Высота верхней панели */
   left: 0;
@@ -159,22 +150,20 @@ body {
 }
 
 .sidebar-section {
-  padding: 8px 0;
+  padding: 14px 0;
 }
 
 .sidebar-item {
+  color: #898989;
   display: flex;
   align-items: center;
-  padding: 8px 24px;
   text-decoration: none;
-  color: #030303;
-  font-size: 14px;
-  transition: background-color 0.2s;
+  margin-top: 21.5px;
 }
 
 .sidebar-item i {
-  margin-right: 24px;
-  font-size: 16pt;
+  margin-right: 7px;
+  font-size: 10pt;
   color: #898989;
   min-width: 20px;
   text-align: center;
@@ -190,19 +179,25 @@ body {
 
 /* Стили для раздела подписок */
 .subscriptions h3 {
-  padding: 8px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #606060;
+  font-size: 14.45px;
+  font-weight: 700;
+  color: black;
 }
 
 .subscription-item {
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  padding: 8px 24px;
   text-decoration: none;
-  color: #030303;
-  font-size: 14px;
+  color: #898989;
+}
+
+.subscription-item span {
+  margin-left: 2px;
+}
+
+.subscriptions {
+  margin-top: 15px;
 }
 
 .subscription-item:hover {
@@ -210,10 +205,10 @@ body {
 }
 
 .subscription-item img {
-  width: 24px;
-  height: 24px;
+  width: 21px !important;
+  height: 21px !important;
   border-radius: 50%;
-  margin-right: 24px;
+  margin-right: 4px;
   object-fit: cover;
 }
 
