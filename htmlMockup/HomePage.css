@@ -410,16 +410,36 @@ body {
   overflow: hidden;
 }
 
-.video-stats {
-  font-size: var(--font-xs);
+.video-meta {
+  margin-top: var(--spacing-xs);
+}
+
+.video-meta-top {
+  display: flex;
   color: var(--text-secondary);
-  margin-bottom: 0;
+  font-size: var(--font-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.publish-date {
+  font-size: var(--font-xs);
+}
+
+.meta-separator {
+  margin: 0 var(--spacing-xs);
 }
 
 .channel-title {
   font-size: var(--font-xs);
   color: var(--text-secondary);
-  text-align: right;
+  text-align: left;
+  margin: 0;
+}
+
+.video-stats {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  margin-bottom: 0;
 }
 
 /* Контейнеры для разделов */
@@ -525,12 +545,9 @@ body {
     margin-bottom: 56px;
   }
 
+  .navbar-right .navbar-icon-button,
   .menu-button {
-    display: none; /* Скрываем кнопку меню */
-  }
-
-  .navbar-right .navbar-icon-button {
-    display: none; /* Скрываем все кнопки в правой части навбара */
+    display: none;
   }
 
   .navbar-center {
@@ -547,7 +564,7 @@ body {
   }
 
   .search-form {
-    max-width: 70%; /* Ограничиваем ширину, чтобы не перекрывать аватарку */
+    max-width: 70%;
   }
 
   .channel-info:not(.food-drink-header) {
@@ -653,7 +670,6 @@ body {
   }
 }
 
-/* Добавить новые стили для мобильного отображения Food & Drink */
 .food-drink-info {
   display: flex;
   flex-direction: column;
@@ -664,7 +680,6 @@ body {
   align-items: center;
 }
 
-/* Изменяем стили для заголовка Food & Drink на десктопе */
 .food-drink-info {
   display: flex;
   flex-direction: row; /* Горизонтальное расположение на десктопе */
@@ -676,7 +691,6 @@ body {
   margin-bottom: 0;
 }
 
-/* В мобильной версии сохраняем вертикальное расположение */
 @media (max-width: 768px) {
   .food-drink-info {
     flex-direction: column; /* Вертикальное расположение на мобильных */
