@@ -349,14 +349,6 @@
   .playlists-container {
     grid-template-columns: 1fr;
   }
-
-  .channel-trailer {
-    padding: 0 var(--spacing-md);
-  }
-
-  .channel-content-row {
-    padding: 0 var(--spacing-md);
-  }
 }
 
 @media (max-width: 992px) {
