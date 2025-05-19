@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food & Drink - YouTube Channel</title>
+    <link rel="stylesheet" href="ChannelPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Верхняя панель (навбар) -->
+    <header class="navbar">
+      <div class="navbar-left">
+        <button class="menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="HomePage.html">
+          <img src="./logo.svg" class="logo" />
+        </a>
+      </div>
+
+      <div class="navbar-center">
+        <form class="search-form">
+          <input type="text" placeholder="Search" class="search-input" />
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="navbar-right">
+        <button class="navbar-icon-button">
+          <i class="fas fa-video"></i>
+        </button>
+        <button class="navbar-icon-button">
+          <i class="fas fa-th"></i>
+        </button>
+        <button class="navbar-icon-button notification-button">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">1</span>
+        </button>
+        <a href="#" class="avatar">
+          <img
+            src="https://placehold.co/400x400/orange/white"
+            alt="User avatar" />
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Боковая панель (сайдбар) -->
+      <nav class="sidebar" aria-label="Main navigation">
+        <!-- Основные вкладки -->
+        <section class="sidebar-section">
+          <h2 class="visually-hidden">Main menu</h2>
+          <a href="HomePage.html" class="sidebar-item">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-fire"></i>
+            <span>Trending</span>
+          </a>
+          <a href="#" class="sidebar-item active" aria-current="page">
+            <i class="fas fa-tv"></i>
+            <span>Subscriptions</span>
+          </a>
+        </section>
+
+        <!-- Вторая секция -->
+        <section class="sidebar-section">
+          <h2 class="visually-hidden">Library</h2>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-folder"></i>
+            <span>Library</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-clock"></i>
+            <span>Watch later</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-star"></i>
+            <span>Favourites</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-thumbs-up"></i>
+            <span>Liked videos</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-music"></i>
+            <span>Music</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="fas fa-gamepad"></i>
+            <span>Games</span>
+          </a>
+          <a href="#" class="sidebar-item show-more">
+            <i class="fas fa-chevron-down"></i>
+            <span>Show more</span>
+          </a>
+        </section>
+
+        <!-- Секция с подписками -->
+        <section class="sidebar-section subscriptions">
+          <h3 id="subscription-heading">Subscriptions</h3>
+          <div role="list" aria-labelledby="subscription-heading">
+            <a
+              href="ChannelPage.html"
+              class="subscription-item"
+              role="listitem">
+              <img
+                src="https://placehold.co/400x400/orange/white"
+                alt="Gussie Singleton"
+                aria-hidden="true" />
+              <span>Gussie Singleton</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/400x400/orange/white"
+                alt="Nora Francis"
+                aria-hidden="true" />
+              <span>Nora Francis</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/400x400/orange/white"
+                alt="Belle Briggs"
+                aria-hidden="true" />
+              <span>Belle Briggs</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/400x400/orange/white"
+                alt="Eunice Cortez"
+                aria-hidden="true" />
+              <span>Eunice Cortez</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/400x400/orange/white"
+                alt="Emma Hanson"
+                aria-hidden="true" />
+              <span>Emma Hanson</span>
+            </a>
+            <a href="#" class="subscription-item" role="listitem">
+              <img
+                src="https://placehold.co/400x400/orange/white"
+                alt="Leah Berry"
+                aria-hidden="true" />
+              <span>Leah Berry</span>
+            </a>
+          </div>
+        </section>
+      </nav>
+
+      <main class="main-content">
+        <!-- Шапка канала -->
+        <section class="channel-header">
+          <div class="channel-banner">
+            <img
+              src="https://placehold.co/1200x250/orange/white"
+              alt="Channel Banner"
+              class="banner-img" />
+          </div>
+
+          <div class="channel-info-container">
+            <div class="channel-main-info">
+              <img
+                src="https://placehold.co/400x400/orange/white"
+                alt="Food & Drink"
+                class="channel-avatar-large" />
+
+              <div class="channel-details">
+                <h1 class="channel-title-big">Food & Drink</h1>
+                <p class="subscribers-count">2.3M subscribers</p>
+              </div>
+
+              <button class="subscribe-button channel-subscribe-btn">
+                Subscribe
+              </button>
+            </div>
+
+            <nav class="channel-navigation">
+              <ul class="channel-nav-links">
+                <li class="channel-nav-item active"><a href="#">Home</a></li>
+                <li class="channel-nav-item"><a href="#">Videos</a></li>
+                <li class="channel-nav-item"><a href="#">Playlists</a></li>
+                <li class="channel-nav-item"><a href="#">Community</a></li>
+                <li class="channel-nav-item"><a href="#">Channels</a></li>
+                <li class="channel-nav-item"><a href="#">About</a></li>
+                <li class="channel-nav-item">
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+
+        <!-- Добавляем новую секцию с видео-трейлером канала и рекомендованными каналами -->
+        <section class="channel-content-row">
+          <div class="trailer-column">
+            <div class="channel-trailer">
+              <div class="trailer-container">
+                <figure class="thumbnail">
+                  <img
+                    src="https://placehold.co/600x400/lightgreen/white"
+                    alt="Video thumbnail" />
+                  <figcaption class="duration">2:19</figcaption>
+                </figure>
+                <div class="trailer-info">
+                  <h2 class="trailer-title">
+                    Choosing The Best Audio Player Software For Your Computer
+                  </h2>
+                  <p class="trailer-description">
+                    Your cheap internet-based banner advertising will become one
+                    of the sought for ads there are. Today, the world of
+                    Internet advertising is rapidly evolving beyond banner ads
+                    and intrusive pop-ups. Bayles A common medium for
+                    advertising on the Internet is the use of banner ads.
+                  </p>
+                  <div class="trailer-stats">
+                    <div class="stats-item">
+                      <span>11k views · 6 months ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommended-channels-column">
+            <div class="recommended-channels-card">
+              <h3 class="recommended-title">Рекомендованные каналы</h3>
+
+              <div class="recommended-channel-list">
+                <div class="recommended-channel-item">
+                  <img
+                    src="https://placehold.co/400x400/purple/white"
+                    alt="Flora Benson"
+                    class="channel-thumb" />
+                  <div class="recommended-channel-info">
+                    <h4 class="recommended-channel-name">Flora Benson</h4>
+                    <span class="recommendation-type">Recommended channel</span>
+                  </div>
+                </div>
+
+                <div class="recommended-channel-item">
+                  <img
+                    src="https://placehold.co/400x400/indigo/white"
+                    alt="Violet Cobb"
+                    class="channel-thumb" />
+                  <div class="recommended-channel-info">
+                    <h4 class="recommended-channel-name">Violet Cobb</h4>
+                    <span class="recommendation-type">Recommended channel</span>
+                  </div>
+                </div>
+
+                <div class="recommended-channel-item">
+                  <img
+                    src="https://placehold.co/400x400/green/white"
+                    alt="Phillip Mullins"
+                    class="channel-thumb" />
+                  <div class="recommended-channel-info">
+                    <h4 class="recommended-channel-name">Phillip Mullins</h4>
+                    <span class="recommendation-type">Recommended channel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция с популярными видео -->
+        <section class="channel-videos-section">
+          <header class="section-header">
+            <div class="section-title">
+              <h2 class="section-name">Popular Videos</h2>
+            </div>
+            <div class="section-controls">
+              <button
+                class="nav-button prev-button-popular"
+                aria-label="Предыдущие видео">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                class="nav-button next-button-popular"
+                aria-label="Следующие видео">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </header>
+
+          <div class="videos-container popular-videos">
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/400x400/aqua/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">7:36</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Astronomy Or Astrology</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">4 months ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">240K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/lightgreen/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">2:19</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Advertising Outdoors</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">15 days ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">13K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/black/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">9:06</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Radio Astronomy</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">11 months ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">1K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/orange/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">3:40</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">A Good Autoresponder</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">2 months ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">45K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/pink/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">1:56</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Baby Monitor Technology</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">7 months ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">86K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/red/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">4:15</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Asteroids</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">4 months ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">123K views</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Секция с последними загрузками -->
+        <section class="channel-videos-section">
+          <header class="section-header">
+            <div class="section-title">
+              <h2 class="section-name">Latest Uploads</h2>
+            </div>
+            <div class="section-controls">
+              <button
+                class="nav-button prev-button-latest"
+                aria-label="Предыдущие видео">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                class="nav-button next-button-latest"
+                aria-label="Следующие видео">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </header>
+
+          <div class="videos-container latest-videos">
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/red/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">4:15</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Cooking Masterclass: Pasta</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">1 week ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">89K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/yellow/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">8:22</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Perfect Breakfast Ideas</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">2 weeks ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">54K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/green/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">6:18</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Seasonal Vegetable Guide</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">3 weeks ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">37K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/blue/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">10:45</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Wine Tasting for Beginners</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">1 month ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">112K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/purple/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">7:33</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Quick Dinner Recipe</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">1.5 months ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">95K views</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <figure class="thumbnail">
+                <img
+                  src="https://placehold.co/600x400/brown/white"
+                  alt="Video thumbnail" />
+                <figcaption class="duration">5:22</figcaption>
+              </figure>
+              <div class="video-info">
+                <h3 class="video-title">Cocktail Mixing 101</h3>
+                <div class="video-meta">
+                  <div class="video-meta-top">
+                    <time class="publish-date">2 months ago</time>
+                    <span class="meta-separator">•</span>
+                    <p class="channel-title">Food & Drink</p>
+                  </div>
+                  <p class="video-stats">76K views</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Секция с популярными плейлистами -->
+        <section class="playlists-section">
+          <header class="section-header">
+            <div class="section-title">
+              <h2 class="section-name">Popular Playlists</h2>
+            </div>
+          </header>
+
+          <div class="playlists-container">
+            <article class="playlist-card">
+              <figure class="playlist-thumbnail">
+                <img
+                  src="https://placehold.co/600x400/brown/white"
+                  alt="Playlist thumbnail" />
+                <div class="playlist-overlay">
+                  <i class="fas fa-play-circle"></i>
+                  <span class="playlist-count">15 videos</span>
+                </div>
+              </figure>
+              <div class="playlist-info">
+                <h3 class="playlist-title">Breakfast Recipes</h3>
+                <p class="playlist-meta">View full playlist</p>
+              </div>
+            </article>
+
+            <article class="playlist-card">
+              <figure class="playlist-thumbnail">
+                <img
+                  src="https://placehold.co/600x400/darkblue/white"
+                  alt="Playlist thumbnail" />
+                <div class="playlist-overlay">
+                  <i class="fas fa-play-circle"></i>
+                  <span class="playlist-count">8 videos</span>
+                </div>
+              </figure>
+              <div class="playlist-info">
+                <h3 class="playlist-title">Cocktail Masterclass</h3>
+                <p class="playlist-meta">View full playlist</p>
+              </div>
+            </article>
+
+            <article class="playlist-card">
+              <figure class="playlist-thumbnail">
+                <img
+                  src="https://placehold.co/600x400/darkgreen/white"
+                  alt="Playlist thumbnail" />
+                <div class="playlist-overlay">
+                  <i class="fas fa-play-circle"></i>
+                  <span class="playlist-count">22 videos</span>
+                </div>
+              </figure>
+              <div class="playlist-info">
+                <h3 class="playlist-title">Chef's Specials</h3>
+                <p class="playlist-meta">View full playlist</p>
+              </div>
+            </article>
+
+            <article class="playlist-card">
+              <figure class="playlist-thumbnail">
+                <img
+                  src="https://placehold.co/600x400/maroon/white"
+                  alt="Playlist thumbnail" />
+                <div class="playlist-overlay">
+                  <i class="fas fa-play-circle"></i>
+                  <span class="playlist-count">12 videos</span>
+                </div>
+              </figure>
+              <div class="playlist-info">
+                <h3 class="playlist-title">Wine Tasting Guide</h3>
+                <p class="playlist-meta">View full playlist</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Мобильная навигация -->
+    <nav class="mobile-navigation">
+      <a href="HomePage.html" class="mobile-nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <i class="fas fa-fire"></i>
+        <span>Trending</span>
+      </a>
+      <a href="#" class="mobile-nav-item active">
+        <i class="fas fa-tv"></i>
+        <span>Subscriptions</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <i class="fas fa-folder"></i>
+        <span>Library</span>
+      </a>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Функция для кнопки "Show more"
+        const showMoreButton = document.querySelector(".show-more");
+        if (showMoreButton) {
+          showMoreButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            const showMoreText = this.querySelector("span");
+            const showMoreIcon = this.querySelector("i");
+
+            if (showMoreText && showMoreIcon) {
+              if (showMoreText.textContent === "Show more") {
+                showMoreText.textContent = "Show less";
+                showMoreIcon.classList.replace(
+                  "fa-chevron-down",
+                  "fa-chevron-up"
+                );
+              } else {
+                showMoreText.textContent = "Show more";
+                showMoreIcon.classList.replace(
+                  "fa-chevron-up",
+                  "fa-chevron-down"
+                );
+              }
+            }
+          });
+        }
+
+        // Функция для настройки навигационных кнопок
+        function setupNavButtons(
+          prevButtonSelector,
+          nextButtonSelector,
+          containerSelector
+        ) {
+          const prevButton = document.querySelector(prevButtonSelector);
+          const nextButton = document.querySelector(nextButtonSelector);
+          const container = document.querySelector(containerSelector);
+
+          if (!prevButton || !nextButton || !container) return;
+
+          prevButton.addEventListener("click", function () {
+            container.scrollBy({ left: -400, behavior: "smooth" });
+          });
+
+          nextButton.addEventListener("click", function () {
+            container.scrollBy({ left: 400, behavior: "smooth" });
+          });
+        }
+
+        // Настройка для секций видео
+        setupNavButtons(
+          ".prev-button-popular",
+          ".next-button-popular",
+          ".popular-videos"
+        );
+        setupNavButtons(
+          ".prev-button-latest",
+          ".next-button-latest",
+          ".latest-videos"
+        );
+      });
+    </script>
+  </body>
+</html>

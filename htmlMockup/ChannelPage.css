@@ -1,0 +1,395 @@
+@import url("globals.css");
+
+/* Основной контент */
+.main-content {
+  flex: 1;
+  margin-left: 205px;
+  padding-top: 56px; /* Начинаем сразу под навбаром */
+  width: calc(100% - 205px);
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Стили для шапки канала */
+.channel-header {
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
+.channel-title-big {
+  font-size: var(--font-xxl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.channel-banner {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channel-info-container {
+  padding: 0 var(--spacing-lg);
+}
+
+.channel-main-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.channel-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-circle);
+  margin-right: var(--spacing-lg);
+}
+
+.channel-details {
+  flex-grow: 1;
+}
+
+.subscribers-count {
+  color: var(--text-secondary);
+  font-size: var(--font-md);
+}
+
+.channel-subscribe-btn {
+  padding: 10px var(--spacing-lg);
+}
+
+.channel-navigation {
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.channel-nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-xl);
+}
+
+.channel-nav-item {
+  padding: var(--spacing-sm) 0;
+}
+
+.channel-nav-item a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: var(--font-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.channel-nav-item.active a {
+  color: var(--text-primary);
+  position: relative;
+}
+
+.channel-nav-item.active a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+/* Секции видео */
+.channel-videos-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Стили для секции плейлистов */
+.playlists-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.playlist-card {
+  cursor: pointer;
+}
+
+.playlist-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.playlist-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playlist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.playlist-overlay i {
+  font-size: 40px;
+  margin-bottom: var(--spacing-md);
+}
+
+.playlist-count {
+  font-size: var(--font-md);
+}
+
+.playlist-info {
+  padding: var(--spacing-sm) 0;
+}
+
+.playlist-title {
+  font-size: var(--font-md);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.playlist-meta {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+/* Стили для трейлера канала */
+.channel-trailer {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.trailer-container {
+  display: flex;
+  flex-direction: column; /* По умолчанию располагаем в колонку для мобильных */
+  gap: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.trailer-info {
+  padding: var(--spacing-md) 0;
+}
+
+.trailer-title {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.trailer-description {
+  font-size: var(--font-md);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.trailer-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+.stats-item i {
+  font-size: var(--font-md);
+}
+
+/* Структура для размещения трейлера и рекомендуемых каналов */
+.channel-content-row {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding: 0 var(--spacing-lg);
+}
+
+.trailer-column {
+  flex: 2;
+  min-width: 0;
+}
+
+.recommended-channels-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Стили для карточки с рекомендованными каналами */
+.recommended-channels-card {
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  padding-right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-title {
+  font-size: var(--font-lg);
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.recommended-channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.recommended-channel-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.recommended-channel-item:last-child {
+  border-bottom: none;
+}
+
+.channel-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: var(--spacing-md);
+}
+
+.recommended-channel-info {
+  flex: 1;
+}
+
+.recommended-channel-name {
+  width: fit-content;
+  font-size: var(--font-md);
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.recommendation-type {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 56px var(--spacing-md) var(--spacing-xl);
+    margin-bottom: 56px;
+  }
+
+  .channel-main-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .channel-avatar-large {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .channel-details {
+    margin-bottom: var(--spacing-md);
+  }
+  .channel-header {
+    padding-right: 0;
+  }
+
+  .channel-nav-links {
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    gap: var(--spacing-lg);
+    scrollbar-width: none;
+  }
+
+  .channel-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .playlists-container {
+    grid-template-columns: 1fr;
+  }
+
+  .channel-trailer {
+    padding: 0 var(--spacing-md);
+  }
+
+  .channel-content-row {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 992px) {
+  .channel-content-row {
+    flex-direction: column;
+  }
+
+  .recommended-channels-column {
+    min-width: 100%;
+  }
+}
+
+/* Обновленные адаптивные стили для трейлера */
+@media (min-width: 992px) {
+  .trailer-container {
+    flex-direction: row;
+  }
+
+  .video-wrapper {
+    width: 65%;
+    padding-bottom: 36.5%; /* 56.25% от 65% */
+  }
+
+  .trailer-info {
+    width: 65%;
+    padding-left: var(--spacing-lg);
+  }
+}
