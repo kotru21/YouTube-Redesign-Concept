@@ -610,15 +610,15 @@ body {
 
 /* Адаптивные стили для навбара и сайдбара */
 @media (max-width: 1024px) {
-  .recommended-channels-column {
-    display: none;
-  }
   .navbar-center {
     margin: 0 16px;
   }
 }
 
 @media (max-width: 768px) {
+  .recommended-channels-column {
+    display: none;
+  }
   .sidebar {
     display: none;
   }
