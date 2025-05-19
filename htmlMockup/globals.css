@@ -46,6 +46,32 @@
   --sidebar-width: 220px;
   --sidebar-width-collapsed: 72px;
   --mobile-nav-height: 56px;
+
+  /* Размеры аватаров */
+  --avatar-xs: 21px;
+  --avatar-sm: 28px;
+  --avatar-md: 40px;
+  --avatar-lg: 80px;
+
+  /* Z-индексы для слоев */
+  --z-index-base: 1;
+  --z-index-navbar: 200;
+  --z-index-sidebar: 100;
+  --z-index-mobile-nav: 1000;
+  --z-index-overlay: 300;
+
+  /* Плейлисты и видео */
+  --playlist-overlay-bg: rgba(0, 0, 0, 0.5);
+  --video-aspect-ratio: 16 / 9;
+  --thumbnail-border-radius: 12px;
+
+  /* Типографика */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
 }
 
 /* Базовые стили */
@@ -86,7 +112,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 38px var(--spacing-md);
-  z-index: 200;
+  z-index: var(--z-index-navbar);
 }
 
 .navbar-left {
@@ -205,7 +231,7 @@ body {
   top: var(--navbar-height);
   left: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: var(--z-index-sidebar);
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -271,8 +297,8 @@ body {
 }
 
 .subscription-item img {
-  width: 21px !important;
-  height: 21px !important;
+  width: var(--avatar-xs) !important;
+  height: var(--avatar-xs) !important;
   border-radius: var(--radius-circle);
   margin-right: var(--spacing-xs);
   object-fit: cover;
@@ -285,10 +311,10 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 56px;
+  height: var(--mobile-nav-height);
   background-color: white;
-  border-top: 1px solid #e5e5e5;
-  z-index: 1000;
+  border-top: 1px solid var(--border-light);
+  z-index: var(--z-index-mobile-nav);
 }
 
 .mobile-nav-item {
@@ -340,9 +366,9 @@ body {
 
 .thumbnail img {
   width: 100%;
-  aspect-ratio: 250 / 150;
+  aspect-ratio: var(--video-aspect-ratio);
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--thumbnail-border-radius);
 }
 
 .duration {

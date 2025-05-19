@@ -43,8 +43,8 @@
 }
 
 .channel-avatar-large {
-  width: 80px;
-  height: 80px;
+  width: var(--avatar-lg);
+  height: var(--avatar-lg);
   border-radius: var(--radius-circle);
   margin-right: var(--spacing-lg);
 }
@@ -138,7 +138,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--playlist-overlay-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,16 +178,17 @@
 
 .trailer-container {
   display: flex;
-  flex-direction: column; /* По умолчанию располагаем в колонку для мобильных */
+  flex-direction: column;
   gap: var(--spacing-lg);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
 }
 
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+  padding-bottom: var(--spacing-md);
   height: 0;
   overflow: hidden;
   border-radius: var(--radius-md);
@@ -214,7 +215,7 @@
 .trailer-description {
   font-size: var(--font-md);
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
   margin-bottom: var(--spacing-md);
 }
 
@@ -240,8 +241,6 @@
 .channel-content-row {
   display: flex;
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
-  padding: 0 var(--spacing-lg);
 }
 
 .trailer-column {
@@ -289,9 +288,9 @@
 }
 
 .channel-thumb {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: var(--avatar-md);
+  height: var(--avatar-md);
+  border-radius: var(--radius-circle);
   margin-right: var(--spacing-md);
 }
 

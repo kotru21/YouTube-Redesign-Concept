@@ -41,9 +41,9 @@
   }
 
   .food-drink-header .channel-avatar {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
+    width: var(--avatar-sm);
+    height: var(--avatar-sm);
+    margin-right: var(--spacing-sm);
   }
 
   .food-drink-info {
@@ -52,12 +52,12 @@
   }
 
   .food-drink-info .channel-name {
-    font-size: 16px;
-    margin-bottom: 2px;
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-xs);
   }
 
   .food-drink-info .channel-tag {
-    font-size: 12px;
+    font-size: var(--font-sm);
     margin-left: 0;
   }
 
@@ -67,8 +67,8 @@
   }
 
   .subscribe-button {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-sm);
   }
 }
 
