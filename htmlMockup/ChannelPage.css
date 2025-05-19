@@ -192,10 +192,6 @@
   height: 100%;
 }
 
-.trailer-info {
-  padding: var(--spacing-md) 0;
-}
-
 .trailer-title {
   font-size: var(--font-lg);
   font-weight: 600;
@@ -246,7 +242,7 @@
 /* Стили для карточки с рекомендованными каналами */
 .recommended-channels-card {
   border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
   padding-right: 0;
   height: 100%;
   display: flex;
@@ -303,16 +299,15 @@
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
+  .channel-content-row {
+    padding-right: none;
+  }
+
   .main-content {
     margin-left: 0;
     width: 100%;
     padding: 56px var(--spacing-md) var(--spacing-xl);
     margin-bottom: 56px;
-  }
-
-  .channel-main-info {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .channel-avatar-large {
@@ -342,6 +337,13 @@
   }
 }
 
+@media (max-width: 400px) {
+  .channel-main-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 992px) {
   .channel-content-row {
     flex-direction: column;
@@ -352,13 +354,13 @@
   }
 }
 
-/* Обновленные адаптивные стили для трейлера */
-@media (min-width: 992px) {
-  .trailer-container {
-    gap: var(--spacing-lg);
-    flex-direction: row;
-  }
+.trailer-container {
+  gap: var(--spacing-lg);
+  flex-direction: row;
+}
 
+/* Обновленные адаптивные стили для трейлера */
+@media (min-width: 768px) {
   .video-wrapper {
     width: 65%;
     padding-bottom: 36.5%; /* 56.25% от 65% */
@@ -366,6 +368,68 @@
 
   .trailer-info {
     width: 65%;
-    padding-left: var(--spacing-lg);
+  }
+  @media (max-width: 1200px) {
+    .channel-content-row {
+      padding-right: var(--spacing-lg);
+    }
+  }
+}
+
+/* Новые стили для больших экранов */
+@media (max-width: 1200px) {
+  .trailer-container {
+    gap: var(--spacing-lg);
+    flex-direction: column;
+  }
+  .channel-content-row {
+    flex-direction: column;
+  }
+
+  .trailer-column {
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .recommended-channels-column {
+    width: 100%;
+  }
+
+  .recommended-channels-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .recommended-title {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .recommended-channel-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var(--spacing-lg);
+  }
+
+  .recommended-channel-item {
+    width: calc(25% - var(--spacing-lg));
+    border-bottom: none;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-md);
+  }
+
+  .channel-thumb {
+    width: var(--avatar-lg);
+    height: var(--avatar-lg);
+    margin: 0 auto var(--spacing-sm);
+  }
+
+  .recommended-channel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -361,7 +361,8 @@ body {
 }
 
 .thumbnail {
-  max-width: 400px;
+  height: fit-content;
+
   position: relative;
   width: 100%;
   overflow: hidden;
