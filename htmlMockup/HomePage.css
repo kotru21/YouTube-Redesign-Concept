@@ -15,11 +15,6 @@
   overflow-x: hidden;
 }
 
-/* Основной контент */
-.main-content {
-  padding-top: 90px;
-}
-
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;

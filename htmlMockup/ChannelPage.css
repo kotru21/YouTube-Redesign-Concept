@@ -1,10 +1,5 @@
 @import url("globals.css");
 
-/* Основной контент */
-.main-content {
-  padding-top: 56px;
-}
-
 /* Стили для шапки канала */
 .channel-header {
   width: 100%;
@@ -23,17 +18,13 @@
   height: 200px;
   overflow: hidden;
   margin-bottom: var(--spacing-md);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
 }
 
 .banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.channel-info-container {
-  padding: 0 var(--spacing-lg);
 }
 
 .channel-main-info {
@@ -103,7 +94,7 @@
 
 /* Секции видео */
 .channel-videos-section {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
 }
 
 /* Стили для секции плейлистов */
@@ -239,7 +230,7 @@
 /* Структура для размещения трейлера и рекомендуемых каналов */
 .channel-content-row {
   display: flex;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .trailer-column {
