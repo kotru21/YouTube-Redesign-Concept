@@ -2,13 +2,7 @@
 
 /* Основной контент */
 .main-content {
-  flex: 1;
-  margin-left: 205px;
-  padding-top: 56px; /* Начинаем сразу под навбаром */
-  width: calc(100% - 205px);
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  padding-top: 56px;
 }
 
 /* Стили для шапки канала */

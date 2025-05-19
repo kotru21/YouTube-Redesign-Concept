@@ -17,13 +17,7 @@
 
 /* Основной контент */
 .main-content {
-  flex: 1;
-  margin-left: 205px;
   padding-top: 90px;
-  width: calc(100% - 205px);
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -78,24 +72,15 @@
   }
 }
 
+/* Объединить все объявления в одно */
 .food-drink-info {
   display: flex;
-  flex-direction: column;
-}
-
-.food-drink-header {
-  display: flex;
-  align-items: center;
-}
-
-.food-drink-info {
-  display: flex;
-  flex-direction: row; /* Горизонтальное расположение на десктопе */
+  flex-direction: row;
   align-items: center;
 }
 
 .food-drink-info .channel-name {
-  margin-right: 10px; /* Отступ между названием и тегом */
+  margin-right: 10px;
   margin-bottom: 0;
 }
 
