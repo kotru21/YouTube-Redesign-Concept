@@ -543,6 +543,99 @@ body {
   overflow-x: hidden;
 }
 
+/* Стили для блока описания видео */
+.video-main-content {
+  flex: 1;
+  min-width: 60%;
+}
+
+.video-description {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.channel-info {
+  display: flex;
+  align-items: center;
+
+  padding-bottom: var(--spacing-md);
+}
+
+.channel-avatar {
+  margin-right: var(--spacing-md);
+}
+
+.channel-avatar img {
+  width: var(--avatar-md);
+  height: var(--avatar-md);
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+}
+
+.channel-details {
+  flex: 1;
+}
+
+.channel-name {
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.channel-subscribers {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.video-description-content {
+  position: relative;
+}
+
+.video-metadata {
+  display: flex;
+  margin-bottom: var(--spacing-sm);
+}
+
+.video-views {
+  font-weight: var(--font-weight-medium);
+  margin-right: var(--spacing-md);
+}
+
+.video-date {
+  color: var(--text-secondary);
+}
+
+.description-text {
+  font-size: var(--font-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+  max-height: 80px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.description-text.expanded {
+  max-height: 1000px;
+}
+
+.description-text p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.show-more-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: var(--font-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.show-more-button:hover {
+  color: var(--text-primary);
+}
+
 /* Адаптивные стили для навбара и сайдбара */
 @media (max-width: 1024px) {
   .navbar-center {
@@ -633,7 +726,7 @@ body {
 /* Стили для видеоплеера */
 .video-player {
   width: 100%;
-  max-width: 700px;
+
   margin-bottom: 20px;
 }
 
@@ -850,5 +943,16 @@ input[type="range"]::-webkit-slider-thumb {
 
   .recommended-video {
     max-width: 100%;
+  }
+}
+
+/* Адаптивные стили для блока описания */
+@media (max-width: 768px) {
+  .channel-info {
+    flex-wrap: wrap;
+  }
+
+  .subscribe-button {
+    margin-top: var(--spacing-sm);
   }
 }

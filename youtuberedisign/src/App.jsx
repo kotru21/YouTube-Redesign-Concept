@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import MobileNavigation from "./components/MobileNavigation";
 import VideoPlayer from "./components/VideoPlayer";
+import VideoDescription from "./components/VideoDescription";
 import VideoList from "./components/VideoList";
 import { useState } from "react";
 import "./globals.css";
@@ -21,7 +22,10 @@ function App() {
             !isSidebarOpen ? "sidebar-collapsed" : ""
           }`}>
           <div className="video-content">
-            <VideoPlayer />
+            <div className="video-main-content">
+              <VideoPlayer />
+              <VideoDescription />
+            </div>
             <VideoList />
           </div>
         </main>
