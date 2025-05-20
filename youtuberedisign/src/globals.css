@@ -227,6 +227,7 @@ body {
 
 /* Стили для сайдбара */
 .sidebar {
+  transition: width 0.3s ease;
   font-size: var(--font-sm);
   padding: 0 25px;
   width: var(--sidebar-width);
@@ -271,6 +272,20 @@ body {
 
 .sidebar-item.active > span {
   color: var(--color-primary);
+}
+
+.sidebar-item span {
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar-collapsed .sidebar-item span,
+.sidebar-collapsed #subscription-heading,
+.sidebar-collapsed .subscription-item span {
+  opacity: 0;
+  width: 0;
 }
 
 /* Стили для раздела подписок */
@@ -354,28 +369,6 @@ body {
   border: 0;
 }
 
-.video-card {
-  min-width: 200px;
-  max-width: 200px;
-  cursor: pointer;
-}
-
-.thumbnail {
-  height: fit-content;
-
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 4px;
-}
-
-.thumbnail img {
-  width: 100%;
-  aspect-ratio: var(--video-aspect-ratio);
-  object-fit: cover;
-  border-radius: var(--thumbnail-border-radius);
-}
-
 .duration {
   position: absolute;
   bottom: var(--spacing-md);
@@ -385,86 +378,6 @@ body {
   font-size: var(--font-xs);
   padding: 2px var(--spacing-sm);
   border-radius: 10px;
-}
-
-.video-title {
-  font-size: var(--font-sm);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-xs);
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.video-meta {
-  margin-top: var(--spacing-xs);
-}
-
-.video-meta-top {
-  display: flex;
-  color: var(--text-secondary);
-  font-size: var(--font-xs);
-  margin-bottom: var(--spacing-xs);
-}
-
-.publish-date {
-  font-size: var(--font-xs);
-}
-
-.meta-separator {
-  margin: 0 var(--spacing-xs);
-}
-
-.channel-title {
-  font-size: var(--font-xs);
-  color: var(--text-secondary);
-  text-align: left;
-  margin: 0;
-}
-
-.video-stats {
-  font-size: var(--font-xs);
-  color: var(--text-secondary);
-  margin-bottom: 0;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--spacing-md);
-  width: 100%;
-}
-
-.channel-info {
-  display: flex;
-  align-items: center;
-}
-
-.channel-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-circle);
-  object-fit: cover;
-  margin-right: var(--spacing-md);
-}
-
-.channel-name {
-  font-size: var(--font-xxl);
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.section-controls {
-  margin-right: 105px;
-  display: flex;
-  gap: var(--spacing-md);
-  position: relative;
-  z-index: 10;
 }
 
 .nav-button {
@@ -699,5 +612,239 @@ body {
 
   .menu-button {
     margin-right: 8px;
+  }
+}
+
+/* Дополнительные стили для коллапсируемого сайдбара */
+.sidebar-collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.sidebar-collapsed .sidebar-item {
+  justify-content: center;
+}
+
+.main-content.sidebar-collapsed {
+  margin-left: var(--sidebar-width-collapsed);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin: 0;
+  }
+  .video-container {
+    border-radius: 0 !important;
+  }
+}
+
+/* Стили для видеоплеера */
+.video-player {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+input[type="range"] {
+  overflow: hidden;
+  width: 80px;
+  -webkit-appearance: none;
+  background-color: rgba(128, 128, 128, 0.59);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: #13bba4;
+  margin-top: -1px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: ew-resize;
+  box-shadow: -800px 0 0 800px red;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.video-element {
+  width: 100%;
+  display: block;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-container:hover .video-controls {
+  opacity: 1;
+}
+
+.play-button,
+.fullscreen-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.time-controls {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 0 10px;
+  gap: 10px;
+}
+
+.time-controls input {
+  flex: 1;
+}
+
+.video-info {
+  padding: 15px 0;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.video-stats {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Стили для контейнера с видео и списком */
+.video-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Основной плеер */
+.video-player {
+  flex: 1;
+  min-width: 60%;
+}
+
+/* Список рекомендованных видео */
+.video-list {
+  width: 35%;
+}
+
+.video-list-title {
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.video-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Стили для отдельного рекомендованного видео */
+.recommended-video {
+  display: flex;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+}
+
+.recommended-thumbnail {
+  position: relative;
+  width: 168px;
+  flex-shrink: 0;
+}
+
+.recommended-thumbnail img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.recommended-info {
+  flex: 1;
+}
+
+.recommended-title {
+  font-size: var(--font-md);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-lg);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recommended-channel,
+.recommended-stats {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+  .video-content {
+    gap: var(--spacing-md);
+  }
+
+  .video-player {
+    min-width: 55%;
+  }
+
+  .video-list {
+    width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .video-player {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-content {
+    flex-direction: column;
+  }
+
+  .video-player,
+  .video-list {
+    width: 100%;
+  }
+
+  .video-list-title {
+    margin-top: var(--spacing-lg);
+  }
+
+  .recommended-video {
+    max-width: 100%;
   }
 }

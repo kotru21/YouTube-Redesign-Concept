@@ -1,25 +1,26 @@
-export default function Sidebar() {
+export default function Sidebar({ isOpen }) {
   return (
-    <nav className="sidebar" aria-label="Main navigation">
+    <nav
+      className={`sidebar ${!isOpen ? "sidebar-collapsed" : ""}`}
+      aria-label="Main navigation">
       {/* Основные вкладки */}
       <section className="sidebar-section">
         <h2 className="visually-hidden">Main menu</h2>
         <a href="#" className="sidebar-item active" aria-current="page">
           <i className="fas fa-home" aria-hidden="true"></i>
-          <span>Home</span>
+          <span>{isOpen ? "Home" : ""}</span>
         </a>
         <a href="#" className="sidebar-item">
           <i className="fas fa-fire"></i>
-          <span>Trending</span>
+          <span>{isOpen ? "Trending" : ""}</span>
         </a>
         <a href="#" className="sidebar-item">
           <i className="fas fa-tv"></i>
-          <span>Subscriptions</span>
+          <span>{isOpen ? "Subscriptions" : ""}</span>
         </a>
       </section>
 
-      {/* Вторая секция */}
-      <section className="sidebar-section">
+      <section className={`sidebar-section ${!isOpen ? "hidden-section" : ""}`}>
         <h2 className="visually-hidden">Library</h2>
         <a href="#" className="sidebar-item">
           <i className="fas fa-folder"></i>
@@ -55,8 +56,10 @@ export default function Sidebar() {
         </a>
       </section>
 
-      {/* Секция с подписками */}
-      <section className="sidebar-section subscriptions">
+      <section
+        className={`sidebar-section subscriptions ${
+          !isOpen ? "hidden-section" : ""
+        }`}>
         <h3 id="subscription-heading">Subscriptions</h3>
         <div role="list" aria-labelledby="subscription-heading">
           <a href="#" className="subscription-item" role="listitem">

@@ -1,10 +1,10 @@
 import logo from "../assets/logo.svg";
 
-export default function Navbar() {
+export default function Navbar({ toggleSidebar }) {
   return (
     <header className="navbar">
       <div className="navbar-left">
-        <button className="menu-button">
+        <button className="menu-button" onClick={toggleSidebar}>
           <i className="fas fa-bars"></i>
         </button>
         <a href="#">
