@@ -826,26 +826,27 @@ input[type="range"]::-webkit-slider-thumb {
   .video-player {
     min-width: 55%;
   }
-
-  .video-list {
-    width: 300px;
-  }
 }
 
 @media (max-width: 992px) {
   .video-player {
     min-width: 50%;
   }
+
+  .video-list {
+    width: 100%;
+  }
+  .recommended-thumbnail {
+    width: 320px;
+  }
+  .recommended-title {
+    font-size: var(--font-xl);
+  }
 }
 
 @media (max-width: 768px) {
   .video-content {
     flex-direction: column;
-  }
-
-  .video-player,
-  .video-list {
-    width: 100%;
   }
 
   .video-list-title {
