@@ -543,22 +543,6 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
-  .avatar {
-    margin-left: 12px;
-  }
-  .avatar img {
-    width: 40px;
-    height: 40px;
-  }
-  .search-form {
-    max-width: 70%;
-  }
-  .logo span {
-    display: none;
-  }
-}
-
 /* Адаптивные стили для навбара и сайдбара */
 @media (max-width: 1024px) {
   .navbar-center {
@@ -567,11 +551,26 @@ body {
 }
 
 @media (max-width: 768px) {
+  .recommended-thumbnail {
+    width: 100% !important;
+  }
+  .recommended-video {
+    flex-direction: column;
+  }
+  .main-content {
+    margin: 0;
+  }
+  .video-container {
+    border-radius: 0 !important;
+  }
   .recommended-channels-column {
     display: none;
   }
   .sidebar {
     display: none;
+  }
+  .main-content.sidebar-collapsed {
+    margin-left: 0 !important;
   }
 
   .navbar-right .navbar-icon-button,
@@ -587,6 +586,13 @@ body {
     margin-left: 12px;
   }
 
+  .search-form {
+    max-width: 70%;
+  }
+  .logo span {
+    display: none;
+  }
+
   .avatar img {
     width: 40px;
     height: 40px;
@@ -598,10 +604,6 @@ body {
 
   .mobile-navigation {
     display: flex;
-  }
-
-  .logo span {
-    display: none;
   }
 }
 
@@ -626,21 +628,6 @@ body {
 
 .main-content.sidebar-collapsed {
   margin-left: var(--sidebar-width-collapsed);
-}
-
-@media (max-width: 768px) {
-  .recommended-thumbnail {
-    width: 100% !important;
-  }
-  .recommended-video {
-    flex-direction: column;
-  }
-  .main-content {
-    margin: 0;
-  }
-  .video-container {
-    border-radius: 0 !important;
-  }
 }
 
 /* Стили для видеоплеера */
@@ -795,6 +782,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .recommended-info {
+  max-width: 200px;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
@@ -829,6 +817,13 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 @media (max-width: 992px) {
+  .recommended-info {
+    max-width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
   .video-player {
     min-width: 50%;
   }
@@ -837,7 +832,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 100%;
   }
   .recommended-thumbnail {
-    width: 320px;
+    width: 220px;
   }
   .recommended-title {
     font-size: var(--font-xl);
