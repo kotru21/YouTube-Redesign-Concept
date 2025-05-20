@@ -629,6 +629,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  .recommended-thumbnail {
+    width: 100% !important;
+  }
+  .recommended-video {
+    flex-direction: column;
+  }
   .main-content {
     margin: 0;
   }
@@ -789,13 +795,15 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .recommended-info {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
   flex: 1;
 }
 
 .recommended-title {
   font-size: var(--font-md);
   font-weight: var(--font-weight-medium);
-  margin-bottom: var(--spacing-lg);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

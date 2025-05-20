@@ -104,10 +104,12 @@ export default function VideoList() {
             </div>
             <div className="recommended-info">
               <h4 className="recommended-title">{video.title}</h4>
-              <p className="recommended-channel">{video.channel}</p>
-              <p className="recommended-stats">
-                {video.views} views • {video.date}
-              </p>
+              <div style={{ paddingBottom: "0.3rem" }}>
+                <p className="recommended-channel">{video.channel}</p>
+                <p className="recommended-stats">
+                  {video.views} views • {video.date}
+                </p>
+              </div>
             </div>
           </div>
         ))}
